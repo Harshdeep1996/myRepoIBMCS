@@ -29,10 +29,10 @@ def how_many_screenshots(driver,times):
 		temp = elementHeight / times
 		while(portions < elementHeight):
 			x = driver.execute_script("window.scrollBy(0, %d); return 5;" % portions)
-			#driver.save_screenshot('screenshot_full_%d.png' % portions) 
-			#file = open('screenshot_full_%d.png' % portions, 'r')
+			driver.save_screenshot('screenshot_full_%d.png' % portions) 
+			file = open('screenshot_full_%d.png' % portions, 'r')
 			#To check even if the height is getting added up
-			fb.edit(ixBug=73752, sEvent="The portions is %d and answer %d and height %d and temp %d" %(portions,x,elementHeight,temp))#Files={'screenshot_full_%d.png' % portions: file})
+			fb.edit(ixBug=73752, sEvent="The portions is %d and answer %d and height %d and temp %d" %(portions,x,elementHeight,temp),Files={'screenshot_full_%d.png' % portions: file})
 			portions += temp
 
 if __name__ == '__main__':
