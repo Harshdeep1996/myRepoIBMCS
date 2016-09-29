@@ -1,7 +1,5 @@
 language: python
 python:
   - "2.7"
-before_success:
-  - echo "Deep"
-after_success:
-  - echo "Hello"
+install:
+  - pip install -r requirements.txt
