@@ -18,6 +18,8 @@ def main(source,times=None):
 	driver.quit()
 	display.stop()
 
+	#Does not find file
+
 def how_many_screenshots(driver,times):
 	elementHeight = driver.find_element_by_tag_name("body").size['height'] 
 	if times is None:
@@ -36,4 +38,4 @@ def how_many_screenshots(driver,times):
 			portions += temp
 
 if __name__ == '__main__':
-    main('/$HOME/output.html',times=4)
+    main('/output.html',times=4)
