@@ -22,7 +22,7 @@ def how_many_screenshots(driver,times):
 	elementHeight = driver.find_element_by_tag_name("body").size['height'] 
 	if times is None:
 		driver.save_screenshot('screenshot_full.png')
-		file = open('screenshot_full.png' % portions, 'r')
+		file = open('screenshot_full.png', 'r')
 		fb.edit(ixBug=73752, Files={'screenshot_full.png': file})
 	else:
 		portions = 0
