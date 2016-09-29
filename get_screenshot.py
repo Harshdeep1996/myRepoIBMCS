@@ -24,6 +24,8 @@ def how_many_screenshots(driver,times):
 		while(portions < elementHeight):
 			driver.execute_script("window.scrollBy(0, %d);" % portions)
 			driver.save_screenshot('screenshot_full_%d.png' % portions)
+			file = open('./screenshot_full_%d.png' % portions, 'r')
+			fb.edit(ixBug=73752, Files={'./screenshot_full_%d.png' % portions: file})
 			portions += temp
 
 if __name__ == '__main__':
