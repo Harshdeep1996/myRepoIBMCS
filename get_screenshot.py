@@ -33,4 +33,4 @@ def how_many_screenshots(driver,times):
 			portions += temp
 
 if __name__ == '__main__':
-    main('$HOME/output.html',times=4)
+    main('https://en.wikipedia.org/wiki/Sachin_Tendulkar',times=4)
