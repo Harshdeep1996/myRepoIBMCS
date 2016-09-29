@@ -1,6 +1,10 @@
 import validators
 from selenium import webdriver
 from pyvirtualdisplay import Display
+from fogbugz import FogBugz
+
+fb = FogBugz("https://cloudant.fogbugz.com")
+fb.logon("harshdeep.harshdeep@uk.ibm.com","Harsh1996")
 
 def main(source,times=None):
 	display = Display(visible=0, size=(800, 600))
