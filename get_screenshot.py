@@ -28,11 +28,12 @@ def how_many_screenshots(driver,times):
 		portions = 0
 		temp = elementHeight / times
 		while(portions < elementHeight):
-			driver.execute_script("window.scrollBy(0, %d);" % portions)
-			driver.save_screenshot('screenshot_full_%d.png' % portions)
-			file = open('screenshot_full_%d.png' % portions, 'r')
-			fb.edit(ixBug=73752, Files={'screenshot_full_%d.png' % portions: file})
+			x = driver.execute_script("window.scrollBy(0, %d); return 5;" % portions)
+			#driver.save_screenshot('screenshot_full_%d.png' % portions) 
+			#file = open('screenshot_full_%d.png' % portions, 'r')
+			#To check even if the height is getting added up
+			fb.edit(ixBug=73752, sEvent="The portions is %d and answer %d " %(portions,x))#Files={'screenshot_full_%d.png' % portions: file})
 			portions += temp
 
 if __name__ == '__main__':
-    main('https://en.wikipedia.org/wiki/Stationery',times=2)
+    main('/$HOME/output.html',times=4)
