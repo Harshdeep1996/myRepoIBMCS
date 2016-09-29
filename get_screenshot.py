@@ -35,4 +35,4 @@ def how_many_screenshots(driver,times):
 			portions += temp
 
 if __name__ == '__main__':
-    main('https://en.wikipedia.org/wiki/Sachin_Tendulkar',times=None)
+    main('https://en.wikipedia.org/wiki/Stationery',times=2)
