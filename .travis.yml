@@ -4,8 +4,6 @@ python:
 install:
   - pip install -r requirements.txt
 before_script:
-  - mv chromedriver /usr/bin
-  - chmod a+x chromedriver
   - python -m SimpleHTTPServer &
   - export CHROME_BIN=chromium-browser
   - "export DISPLAY=:99.0"
