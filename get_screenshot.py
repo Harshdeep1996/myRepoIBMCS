@@ -41,7 +41,7 @@ def how_many_screenshots(driver,times):
 
 if __name__ == '__main__':
 	source = "http://localhost:8000/templates/output.html"
-    main(source,times=None)
+	main(source,times=None)
 
 
 
