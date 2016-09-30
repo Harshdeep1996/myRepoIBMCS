@@ -1,3 +1,4 @@
+import os
 import validators
 from selenium import webdriver
 from pyvirtualdisplay import Display
