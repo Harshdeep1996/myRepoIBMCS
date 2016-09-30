@@ -1,4 +1,5 @@
 import os
+import time
 from selenium import webdriver
 from pyvirtualdisplay import Display
 from fogbugz import FogBugz
@@ -23,7 +24,8 @@ def how_many_screenshots(driver,times):
 		portions = 0
 		temp = elementHeight / times
 		while(portions < elementHeight):
-			driver.execute_script("window.scrollBy(0, 34128);")
+			driver.execute_script("window.scrollBy(0, %d);" %portions)
+			time.sleep(10)
 			driver.save_screenshot('screenshot_full_%d.png' % portions) 
 			file = open('screenshot_full_%d.png' % portions, 'r')
 			fb.edit(ixBug=73826, sEvent="The portions is %d and answer %d and temp %d" %(portions,elementHeight,temp),Files={'screenshot_full_%d.png' % portions: file})
