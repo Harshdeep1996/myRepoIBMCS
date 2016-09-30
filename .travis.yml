@@ -1,11 +1,10 @@
 language: python
-sudo: required
 python:
   - "2.7"
 install:
   - pip install -r requirements.txt
 before_script:
-  - sudo mv chromedriver /usr/bin
+  - mv chromedriver /usr/bin
   - chmod a+x chromedriver
   - python -m SimpleHTTPServer &
   - export CHROME_BIN=chromium-browser
