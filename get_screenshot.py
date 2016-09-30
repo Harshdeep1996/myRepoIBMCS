@@ -13,7 +13,7 @@ def main(source,times=None):
 	driver = webdriver.Firefox() #Using chrome web driver
 	if not validators.url(source): 
 		boolexists = os.path.exists('output.html')
-		driver.get("file://" + $HOME + "/templates/" +source)
+		driver.get("file://" + "/templates/" +source)
 	else:
 		driver.get(source) #Fill in URL
 	how_many_screenshots(driver,times)
