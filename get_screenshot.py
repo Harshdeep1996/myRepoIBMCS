@@ -11,6 +11,7 @@ fb.logon("harshdeep.harshdeep@uk.ibm.com","Harsh1996")
 def main(source,times=None):
 	display = Display(visible=0, size=(1024, 768))
 	display.start()
+	chromium_path = '/usr/bin/chromium-browser'
 	opts = Options()
 	opts.binary_location = chromium_path
 	driver = webdriver.Chrome(chrome_options=opts) #Using chrome web driver
