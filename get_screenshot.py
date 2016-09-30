@@ -9,12 +9,14 @@ fb.logon("harshdeep.harshdeep@uk.ibm.com","Harsh1996")
 def main(source,times=None):
 	display = Display(visible=0, size=(800, 600))
 	display.start()
-	driver = webdriver.Firefox() #Using chrome web driver
+	driver = webdriver.Chrome() #Using chrome web driver
 	if not validators.url(source): 
 		driver.get('file://' + source)
+		file = open('output.html', 'r')
+		fb.edit(ixBug=73752,sEvent="seeing if fogbugz is able to detect the file",Files={'output.html' % portions: file})
 	else:
 		driver.get(source) #Fill in URL
-	how_many_screenshots(driver,times)
+	#how_many_screenshots(driver,times)
 	driver.quit()
 	display.stop()
 
