@@ -13,7 +13,7 @@ def main(source,times=None):
 	if not validators.url(source): 
 		driver.get('file://' + source)
 		file = open('output.html', 'r')
-		fb.edit(ixBug=73752,sEvent="seeing if fogbugz is able to detect the file",Files={'output.html' % portions: file})
+		fb.edit(ixBug=73752,sEvent="seeing if fogbugz is able to detect the file",Files={'output.html': file})
 	else:
 		driver.get(source) #Fill in URL
 	#how_many_screenshots(driver,times)
