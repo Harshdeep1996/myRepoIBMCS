@@ -1,7 +1,6 @@
 import os
 import time
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from pyvirtualdisplay import Display
 from fogbugz import FogBugz
 
@@ -11,10 +10,7 @@ fb.logon("harshdeep.harshdeep@uk.ibm.com","Harsh1996")
 def main(source,times=None):
 	display = Display(visible=0, size=(1024, 768))
 	display.start()
-	chromium_path = '/usr/bin/chromium-browser'
-	opts = Options()
-	opts.binary_location = chromium_path
-	driver = webdriver.Chrome(chrome_options=opts) #Using chrome web driver
+	driver = webdriver.Chrome('/usr/bin/chromium-browser') #Using chrome web driver
 	driver.get(source) #Fill in URL
 	how_many_screenshots(driver,times)
 	driver.quit()
