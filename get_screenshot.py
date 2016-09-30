@@ -10,7 +10,9 @@ fb.logon("harshdeep.harshdeep@uk.ibm.com","Harsh1996")
 def main(source,times=None):
 	display = Display(visible=0, size=(1024, 768))
 	display.start()
-	driver = webdriver.Chrome('/home/travis/virtualenv/python2.7.9/chromedriver') #Using chrome web driver
+	options = webdriver.ChromeOptions()
+	options.binary_location = '/usr/bin/chromium-browser'
+	driver = webdriver.Chrome('/home/travis/virtualenv/python2.7.9/chromedriver',chrome_options=options) #Using chrome web driver
 	driver.get(source) #Fill in URL
 	how_many_screenshots(driver,times)
 	driver.quit()
