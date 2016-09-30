@@ -1,5 +1,4 @@
 import os
-import validators
 from selenium import webdriver
 from pyvirtualdisplay import Display
 from fogbugz import FogBugz
@@ -10,17 +9,11 @@ fb.logon("harshdeep.harshdeep@uk.ibm.com","Harsh1996")
 def main(source,times=None):
 	display = Display(visible=0, size=(800, 600))
 	display.start()
-	driver = webdriver.Firefox() #Using chrome web driver
-	# if not validators.url(source): 
-	# 	boolexists = os.path.exists('output.html')
-	# 	driver.get("file://" + "/templates/" +source)
-	# else:
-	driver.get(source) #Fill in URL
+	driver = webdriver.Firefox()
+	driver.get(source)
 	how_many_screenshots(driver,times)
 	driver.quit()
 	display.stop()
-
-	#Does not find file
 
 def how_many_screenshots(driver,times):
 	elementHeight = driver.find_element_by_tag_name("body").size['height'] 
@@ -35,13 +28,9 @@ def how_many_screenshots(driver,times):
 			x = driver.execute_script("window.scrollBy(0, %d); return 5;" % portions)
 			driver.save_screenshot('screenshot_full_%d.png' % portions) 
 			file = open('screenshot_full_%d.png' % portions, 'r')
-			#To check even if the height is getting added up
 			fb.edit(ixBug=73752, sEvent="The portions is %d and answer %d and height %d and temp %d" %(portions,x,elementHeight,temp),Files={'screenshot_full_%d.png' % portions: file})
 			portions += temp
 
 if __name__ == '__main__':
 	source = "http://localhost:8000/templates/output.html"
-	main(source,times=None)
-
-
-
+	main(source,times=4)
