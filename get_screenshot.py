@@ -15,7 +15,7 @@ def main(source,times=None):
 	if not validators.url(source): 
 		boolexists = os.path.exists('output.html')
 		home = expanduser("~")
-		driver.get(home + "/templates/" +source)
+		driver.get("file:///" + home + "/templates/" +source)
 		file = open('output.html', 'r')
 		fb.edit(ixBug=73752,sEvent="seeing if fogbugz is able to detect the file file exists %s" %boolexists,Files={'output.html': file})
 	else:
