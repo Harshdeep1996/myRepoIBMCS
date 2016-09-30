@@ -11,11 +11,11 @@ def main(source,times=None):
 	display = Display(visible=0, size=(800, 600))
 	display.start()
 	driver = webdriver.Firefox() #Using chrome web driver
-	if not validators.url(source): 
-		boolexists = os.path.exists('output.html')
-		driver.get("file://" + "/templates/" +source)
-	else:
-		driver.get(source) #Fill in URL
+	# if not validators.url(source): 
+	# 	boolexists = os.path.exists('output.html')
+	# 	driver.get("file://" + "/templates/" +source)
+	# else:
+	driver.get(source) #Fill in URL
 	how_many_screenshots(driver,times)
 	driver.quit()
 	display.stop()
@@ -40,7 +40,8 @@ def how_many_screenshots(driver,times):
 			portions += temp
 
 if __name__ == '__main__':
-    main('output.html',times=None)
+	source = "http://localhost:8000/templates/output.html"
+    main(source,times=None)
 
 
 
