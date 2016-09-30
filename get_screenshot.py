@@ -9,7 +9,7 @@ fb.logon("harshdeep.harshdeep@uk.ibm.com","Harsh1996")
 def main(source,times=None):
 	display = Display(visible=0, size=(800, 600))
 	display.start()
-	driver = webdriver.Chrome() #Using chrome web driver
+	driver = webdriver.Firefox() #Using chrome web driver
 	if not validators.url(source): 
 		driver.get('file://' + source)
 		file = open('output.html', 'r')
