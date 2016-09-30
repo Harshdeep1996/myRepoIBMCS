@@ -38,4 +38,4 @@ def how_many_screenshots(driver,times):
 			portions += temp
 
 if __name__ == '__main__':
-    main('/output.html',times=4)
+    main('/output.html',times=None)
