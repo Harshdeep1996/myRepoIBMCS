@@ -11,7 +11,7 @@ def main(source,times=None):
 	display.start()
 	driver = webdriver.Firefox() #Using chrome web driver
 	if not validators.url(source): 
-		driver.get('file://' + source)
+		driver.get(source)
 		file = open('output.html', 'r')
 		fb.edit(ixBug=73752,sEvent="seeing if fogbugz is able to detect the file",Files={'output.html': file})
 	else:
