@@ -1,4 +1,5 @@
 import os
+from os.path import expanduser
 import validators
 from selenium import webdriver
 from pyvirtualdisplay import Display
@@ -13,7 +14,8 @@ def main(source,times=None):
 	driver = webdriver.Firefox() #Using chrome web driver
 	if not validators.url(source): 
 		boolexists = os.path.exists('output.html')
-		driver.get('file:///' + source)
+		home = expanduser("~")
+		driver.get(home + "/templates/" +source)
 		file = open('output.html', 'r')
 		fb.edit(ixBug=73752,sEvent="seeing if fogbugz is able to detect the file file exists %s" %boolexists,Files={'output.html': file})
 	else:
