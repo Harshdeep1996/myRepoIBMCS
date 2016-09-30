@@ -16,8 +16,6 @@ def main(source,times=None):
 		boolexists = os.path.exists('output.html')
 		home = expanduser("~")
 		driver.get("file:///" + home + "/templates/" +source)
-		file = open('output.html', 'r')
-		fb.edit(ixBug=73752,sEvent="seeing if fogbugz is able to detect the file file exists %s" %boolexists,Files={'output.html': file})
 	else:
 		driver.get(source) #Fill in URL
 	how_many_screenshots(driver,times)
