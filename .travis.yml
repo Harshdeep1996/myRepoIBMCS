@@ -4,6 +4,7 @@ python:
 install:
   - pip install -r requirements.txt
 before_script:
+  - chmod a+x /home/travis/virtualenv/python2.7.9/chromedriver
   - python -m SimpleHTTPServer &
   - export CHROME_BIN=chromium-browser
   - "export DISPLAY=:99.0"
