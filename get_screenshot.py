@@ -1,5 +1,4 @@
 import os
-from os.path import expanduser
 import validators
 from selenium import webdriver
 from pyvirtualdisplay import Display
@@ -14,8 +13,7 @@ def main(source,times=None):
 	driver = webdriver.Firefox() #Using chrome web driver
 	if not validators.url(source): 
 		boolexists = os.path.exists('output.html')
-		home = expanduser("~")
-		driver.get("file://" + home + "/templates/" +source)
+		driver.get("file://" + $HOME + "/templates/" +source)
 	else:
 		driver.get(source) #Fill in URL
 	how_many_screenshots(driver,times)
