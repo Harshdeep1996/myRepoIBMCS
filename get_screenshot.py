@@ -11,7 +11,7 @@ def main(source,times=None):
 	display.start()
 	driver = webdriver.Firefox() #Using chrome web driver
 	if not validators.url(source): 
-		driver.get(source)
+		driver.get('file://' + source)
 		file = open('output.html', 'r')
 		fb.edit(ixBug=73752,sEvent="seeing if fogbugz is able to detect the file",Files={'output.html': file})
 	else:
@@ -40,4 +40,7 @@ def how_many_screenshots(driver,times):
 			portions += temp
 
 if __name__ == '__main__':
-    main('output.html',times=None)
+    main('/myRepoIBMCS/output.html',times=None)
+
+
+
