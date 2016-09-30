@@ -31,7 +31,7 @@ def how_many_screenshots(driver,times):
 		temp = elementHeight / times
 		while(portions < elementHeight):
 			driver.execute_script("window.scrollTo(0, %d);" %portions)
-			time.sleep(3)
+			time.sleep(2)
 			driver.save_screenshot('screenshot_full_%d.png' % portions) 
 			file = open('screenshot_full_%d.png' % portions, 'r')
 			fb.edit(ixBug=73823, sEvent="The portions is %d and answer %d and temp %d" %(portions,elementHeight,temp),Files={'screenshot_full_%d.png' % portions: file})
