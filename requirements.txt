@@ -2,4 +2,3 @@ pyvirtualdisplay
 validators
 selenium
 fogbugz==0.9.6
-chromedriver

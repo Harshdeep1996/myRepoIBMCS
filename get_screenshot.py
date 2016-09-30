@@ -12,6 +12,10 @@ def main(source,times=None):
 	display.start()
 	options = webdriver.ChromeOptions()
 	options.binary_location = '/usr/bin/chromium-browser'
+	options.add_argument("--no-sandbox")
+	options.add_argument("--no-default-browser-check")
+	options.add_argument("--no-first-run")
+	options.add_argument("--disable-default-apps")
 	driver = webdriver.Chrome('/home/travis/virtualenv/python2.7.9/chromedriver',chrome_options=options) #Using chrome web driver
 	driver.get(source) #Fill in URL
 	how_many_screenshots(driver,times)
