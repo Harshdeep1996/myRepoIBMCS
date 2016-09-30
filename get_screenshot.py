@@ -10,7 +10,7 @@ fb.logon("harshdeep.harshdeep@uk.ibm.com","Harsh1996")
 def main(source,times=None):
 	display = Display(visible=0, size=(1024, 768))
 	display.start()
-	driver = webdriver.Firefox() #Using chrome web driver
+	driver = webdriver.Chrome() #Using chrome web driver
 	driver.get(source) #Fill in URL
 	how_many_screenshots(driver,times)
 	driver.quit()
@@ -24,11 +24,11 @@ def how_many_screenshots(driver,times):
 		portions = 0
 		temp = elementHeight / times
 		while(portions < elementHeight):
-			driver.execute_script("window.scrollBy(0, %d);" %portions)
-			time.sleep(10)
+			driver.execute_script("window.scrollTo(0, %d);" %portions)
+			time.sleep(3)
 			driver.save_screenshot('screenshot_full_%d.png' % portions) 
 			file = open('screenshot_full_%d.png' % portions, 'r')
-			fb.edit(ixBug=73826, sEvent="The portions is %d and answer %d and temp %d" %(portions,elementHeight,temp),Files={'screenshot_full_%d.png' % portions: file})
+			fb.edit(ixBug=73823, sEvent="The portions is %d and answer %d and temp %d" %(portions,elementHeight,temp),Files={'screenshot_full_%d.png' % portions: file})
 			portions += temp
 
 if __name__ == '__main__':
