@@ -2,7 +2,6 @@ language: python
 python:
   - "2.7"
 install:
-  - 'echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config'
   - pip install -r requirements.txt
   - ./gen-credentials.py > ~/.credentials
 before_script:
