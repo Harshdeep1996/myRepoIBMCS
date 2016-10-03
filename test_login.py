@@ -1,4 +1,4 @@
-from utilitarian.utilitarian.services.tickets import connect_to_fogbugz
+from utilitarian.services.tickets import connect_to_fogbugz
 
 def main():
 	fb = connect_to_fogbugz()
