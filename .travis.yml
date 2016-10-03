@@ -13,4 +13,7 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
 script:
+  - python test_login.py
   - python get_screenshot.py
+after_success:
+  - rm  ~/.credentials
