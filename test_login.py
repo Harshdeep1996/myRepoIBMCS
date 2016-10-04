@@ -1,7 +1,8 @@
-from utilitarian.services.tickets import connect_to_fogbugz
+from utilitarian.credentials import Config
 
 def main():
-	fb = connect_to_fogbugz()
+	config = Config('~/.credentials')
+	print config['github'].username
 
 if __name__ == '__main__':
 	main()
