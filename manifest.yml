@@ -1,0 +1,8 @@
+---
+applications:
+- buildpack: https://github.com/Harshdeep1996/myRepoIBMCS.git
+  name: travis-trigger
+  memory: 32M
+  stack: cflinuxfs2
+  instances: 1
+  path: .
