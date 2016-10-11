@@ -4,4 +4,7 @@ selenium
 fogbugz==0.9.6
 travispy
 requests==2.10.0
-git+ssh://git@github.ibm.com/cloudant/utilitarian.git
+lxml
+html5lib
+BeautifulSoup
+pandas
