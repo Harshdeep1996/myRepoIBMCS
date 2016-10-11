@@ -1,3 +1,5 @@
+cython
+pandas
 pyvirtualdisplay
 validators
 selenium
