@@ -6,5 +6,6 @@ travispy
 requests==2.10.0
 lxml
 html5lib
+cython
 BeautifulSoup
 pandas
