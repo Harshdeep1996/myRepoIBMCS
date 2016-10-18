@@ -3,8 +3,6 @@ cache: pip
 python:
   - "2.7"
 install:
-  - ./gen-credentials.py > ~/.credentials
-  - cat ~/.credentials
   - python get_token_travis.py 
   - pip install -r requirements.txt
   - echo "Hello"
