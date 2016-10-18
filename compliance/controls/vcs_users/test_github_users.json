@@ -1,0 +1,17 @@
+{
+    "repo": "https://github.ibm.com/cloudant/evidence-collector",
+    "evidence": [
+      {
+        "name": "usam_users.json",
+        "url": null,
+        "ttl": 2592000,
+        "description": "List of users who have github.com/cloudant access from USAM"
+      },
+      {
+        "name": "github_users.json",
+        "url": null,
+        "ttl": 2592000,
+        "description": "List of users who have github.com/cloudant access from Github"
+      }
+    ]
+  }

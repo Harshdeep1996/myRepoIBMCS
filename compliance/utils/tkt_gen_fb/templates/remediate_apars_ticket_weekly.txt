@@ -1,0 +1,1 @@
+'For IBM timelines on internet facing machines we need to remediate medium issues in 7 days, high issues in 3 days, or take machine offline'
