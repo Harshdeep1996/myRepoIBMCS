@@ -1,1 +1,0 @@
-'For SOC2 evidence that we run Nessus scans, this is the current evidence we have that Nessus runs'

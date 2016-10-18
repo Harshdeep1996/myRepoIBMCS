@@ -1,7 +1,0 @@
-"Parent case for remediation of NessusTest scan Nessus scan results need pulling from Cognos weekly link below:
-
-https://w3.isie.ibmcloud.com/bi/?perspective=home&context={\%22perspective\%22\%3A\%22home\%22\%2C\%22content\%22\%3A\{}} 
-
-Need to run the Vulnerabilities Export and System Export report from Cognos for compliance purposes and create subcases of this case for extant vulnerabilities found. Once extracted reports both need filing at this wiki location for future reference/retention for audit purposes 
-
-https://w3-connections.ibm.com/activities/service/html/mainpage#activitypage,b3514511-4f81-46f7-99e6-bf933ef83c17"
