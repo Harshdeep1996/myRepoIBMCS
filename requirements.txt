@@ -4,6 +4,4 @@ selenium
 fogbugz==0.9.6
 travispy
 requests==2.10.0
-lxml
-html5lib
 BeautifulSoup

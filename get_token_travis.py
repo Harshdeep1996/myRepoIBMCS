@@ -1,4 +1,4 @@
 import os
+import sys
 
-x = os.getenv('VARIABLE_TOKEN')
-print x
+sys.stderr.write("harsh")

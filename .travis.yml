@@ -5,8 +5,7 @@ python:
 install:
   - ./gen-credentials.py > ~/.credentials
   - cat ~/.credentials
-  - python get_token_travis.py > ~/.cloucreds
-  - cat ~/.cloucreds
+  - python get_token_travis.py 
   - pip install -r requirements.txt
   - echo "Hello"
 before_script:
