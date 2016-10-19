@@ -9,4 +9,4 @@ install:
   - pip install -r requirements.txt
   - echo "Hello"
 script:
-  - if [$TRAVIS_EVENT_TYPE == "api"] then echo "It is working" else echo "Not working" fi
+  - if [$TRAVIS_EVENT_TYPE == "api"] then echo "It is working" fi
