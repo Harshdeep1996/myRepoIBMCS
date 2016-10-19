@@ -1,1 +1,2 @@
 GitPython==2.0.7
+pytz
