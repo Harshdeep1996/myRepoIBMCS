@@ -3,8 +3,10 @@ import sys
 import git
 from datetime import datetime as dt
 from datetime import timedelta
+import pytz
 
 g = git.Git()
+bst = pytz.timezone('Europe/London')
 time_now = dt.utcnow()
 #print g.log()
 print g.log("-1")
@@ -13,7 +15,8 @@ print g.log("-1","test.xml")
 print "-------------------------------------------------------------------------------------------"
 print g.log("-1","--pretty='%ci'","test.xml")
 print "-------------------------------------------------------------------------------------------"
-x = dt.strptime(g.log('-1', '--pretty="%ci"', 'test.xml')[1:-7], "%Y-%m-%d %H:%M:%S")
+time_updated = bst.localize(dt.strptime(g.log('-1', '--pretty="%ci"', 'test.xml')[1:-7], "%Y-%m-%d %H:%M:%S")).astimezone(pytz.utc)
+x = time_updated.strftime("%Y-%m-%d %H:%M:%S")
 #print(dt.fromtimestamp(int(x)).strftime('%Y-%m-%d %H:%M:%S'))
 sys.stderr.write("The time now is %s \n" %str(time_now))
 sys.stderr.write("Age of file is: %s" %str(x))
