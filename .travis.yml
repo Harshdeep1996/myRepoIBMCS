@@ -4,7 +4,7 @@ python:
   - "2.7"
 install:
   - ls
-  - export TRAVIS_EVENT_TYPE=api
+  - export TRAVIS_EVENT_TYPE=apikd
   - echo $TRAVIS_EVENT_TYPE
   - pip install -r requirements.txt
   - python get_token_travis.py 
