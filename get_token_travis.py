@@ -22,3 +22,6 @@ sys.stderr.write("Age of file is: %s" %str(time_updated))
 
 sys.stderr.write("The time difference between seconds: %s" %str((time_now - time_updated).total_seconds()))
 
+if (time_now - time_updated).total_seconds() > 90000:
+	sys.stderr.write("The if condition might be working")
+
