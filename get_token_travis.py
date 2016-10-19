@@ -5,5 +5,7 @@ from datetime import datetime as dt
 from datetime import timedelta
 
 g = git.Git()
-file_age = dt.strptime(g.log('-1', '--pretty="%cI"', 'test.xml')[1:-7], "%Y-%m-%dT%H:%M:%S") + timedelta(minutes=60)
-sys.stderr.write("Total time lapsed : %s \n" %str((dt.now() - file_age).total_seconds()))
+time_now = dt.now()
+file_age = g.log('-1', '--pretty="%cI"', 'test.xml')[1:-7]
+sys.stderr.write("The time now is %s" %str(time_now))
+sys.stderr.write("Age of file is: %s" %str(file_age))
