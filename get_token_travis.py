@@ -22,8 +22,11 @@ sys.stderr.write("Age of file is: %s \n" %str(time_updated))
 
 sys.stderr.write("The time difference between seconds: %s \n" %str((time_now - time_updated).total_seconds()))
 
-sys.stderr.write("Just outside the if condition")
+sys.stderr.write("Just outside the if condition\n")
 if (time_now - time_updated).total_seconds() < 90000:
-	sys.stderr.write("The if condition might be working")
-sys.stderr.write("Condition is finished")
+	sys.stderr.write("The if condition might be working\n")
+sys.stderr.write("Condition is finished\n")
+
+def test_what_working(self):
+	
 
