@@ -8,3 +8,11 @@ install:
   - ls
   - ./build-travis.sh
   - echo "fiished"
+
+branches:
+  except:
+    - master
+    
+branches:
+  only:
+    - test-branch
