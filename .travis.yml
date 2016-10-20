@@ -13,8 +13,8 @@ script:
 
 branches:
   except:
-    - master
+    - test-branch
     
 branches:
   only:
-    - test-branch
+    - master
