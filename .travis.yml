@@ -6,3 +6,4 @@ install:
   - pip install -r requirements.txt
   - echo "Hello"
   - ls
+  - echo "fiished"
