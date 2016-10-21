@@ -7,7 +7,7 @@ install:
   - export TRAVIS_EVENT_TYPE=api
   - echo $TRAVIS_EVENT_TYPE
   - pip install -r requirements.txt
-  - if [ -z "$TRAVIS_COMMIT_RANGE" -o $TRAVIS_BRANCH = master];
+  - if [ -z "$TRAVIS_COMMIT_RANGE" -o $TRAVIS_BRANCH = master ];
     then echo "Hello"; else
     echo "Bye";
     fi
