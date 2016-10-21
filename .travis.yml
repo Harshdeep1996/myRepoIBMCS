@@ -7,6 +7,8 @@ install:
   - export TRAVIS_EVENT_TYPE=api
   - echo $TRAVIS_EVENT_TYPE
   - pip install -r requirements.txt
+script:
   - if [ -z "$TRAVIS_COMMIT_RANGE" -o $TRAVIS_BRANCH = master ];
     then ./compliance-infra-alerts.sh
-    fi 
+    fi
+    
