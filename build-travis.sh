@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ "${TRAVIS_EVENT_TYPE}" == "api" ]; then 
-    echo "It is working" 
- else
-    echo "It is not working"
+if [ -z "$TRAVIS_COMMIT_RANGE" ]; then
+    echo "it is working"
+else
+    echo "it is not working"
 fi

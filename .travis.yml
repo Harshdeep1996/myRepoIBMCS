@@ -8,13 +8,5 @@ install:
   - echo $TRAVIS_EVENT_TYPE
   - pip install -r requirements.txt
   - echo "Hello"
-script:
   - ./build-travis.sh
-
-branches:
-  except:
-    - test-branch
-    
-branches:
-  only:
-    - master
+  
