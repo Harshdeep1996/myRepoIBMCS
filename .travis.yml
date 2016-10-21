@@ -14,6 +14,6 @@ install:
 notifications:
   email:
     recipients:
-      if [ -z "$TRAVIS_COMMIT_RANGE" -o $TRAVIS_BRANCH = master ];
-      then - harshcs.1996@gmail.com 
-      fi
+      - if [ -z "$TRAVIS_COMMIT_RANGE" -o $TRAVIS_BRANCH = master ];
+        then harshcs.1996@gmail.com;
+        fi
