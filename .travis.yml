@@ -11,3 +11,12 @@ install:
     then echo "Hello"; else
     echo "Bye";
     fi
+notifications:
+  if [ -z "$TRAVIS_COMMIT_RANGE" -o $TRAVIS_BRANCH = master ]; then
+  email:
+    recipients:
+      - harshcs.1996@gmail.com
+  else
+    echo "Bye";
+  fi
+
