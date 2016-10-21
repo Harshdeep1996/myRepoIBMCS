@@ -15,5 +15,5 @@ notifications:
   email:
     recipients:
       if [ -z "$TRAVIS_COMMIT_RANGE" -o $TRAVIS_BRANCH = master ];
-      - harshcs.1996@gmail.com
-      
+      then - harshcs.1996@gmail.com 
+      fi
