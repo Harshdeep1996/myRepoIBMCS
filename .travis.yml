@@ -7,6 +7,7 @@ install:
   - export TRAVIS_EVENT_TYPE=api
   - echo $TRAVIS_EVENT_TYPE
   - pip install -r requirements.txt
-  - echo "Hello"
-  - ./build-travis.sh
-  
+  - if [ -z "$TRAVIS_COMMIT_RANGE" ];
+    then echo "Hello"; else
+    echo "Bye";
+    fi
