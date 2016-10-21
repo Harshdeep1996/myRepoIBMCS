@@ -8,12 +8,5 @@ install:
   - echo $TRAVIS_EVENT_TYPE
   - pip install -r requirements.txt
   - if [ -z "$TRAVIS_COMMIT_RANGE" -o $TRAVIS_BRANCH = master ];
-    then echo "Hello"; else
-    echo "Bye";
-    fi
-notifications:
-  email:
-    recipients:
-      - if [ -z "$TRAVIS_COMMIT_RANGE" -o $TRAVIS_BRANCH = master ];
-        then harshcs.1996@gmail.com;
-        fi
+    then ./compliance-infra-alerts.sh
+    fi 
